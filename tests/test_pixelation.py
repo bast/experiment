@@ -1,3 +1,12 @@
+import os
+import sys
+
+# workaround so that we can import imgfilters without installing it as package
+# this is not elegant but simplifies the discussion during the course
+# which is not focused on packaging
+sys.path.insert(0, os.path.abspath(".."))
+
+
 from imgfilters.file_io import read_image
 from imgfilters.filters import pixelate
 from imgfilters.metrics import mean_squared_error

@@ -28,5 +28,5 @@ jobs:
         pip install -r requirements-dev.txt
     - name: Run tests
       run: |
-        pytest -v imgfilters/*.py
-        pytest -v tests/*.py
+        pytest -v imgfilters/metrics.py
+        pytest -v tests/

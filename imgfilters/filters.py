@@ -1,8 +1,13 @@
 import numpy as np
 from skimage.filters import gaussian
 from skimage.restoration import denoise_nl_means, estimate_sigma
-from skimage import color, filters, img_as_float, transform
+from skimage import color, filters, img_as_float, transform, util
 from sklearn.cluster import KMeans
+
+
+def add_noise(image, amount):
+    noisy_image = util.random_noise(image, mode="s&p", amount=amount)
+    return noisy_image
 
 
 def gaussian_smoothing(image, sigma=5):

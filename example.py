@@ -1,9 +1,9 @@
-from imgfilters.noise import add_noise
 from imgfilters.filters import (
+    grayscale,
+    add_noise,
     gaussian_smoothing,
     denoise,
     warhol_effect,
-    grayscale,
     pixelate,
 )
 from imgfilters.file_io import read_image, save_image

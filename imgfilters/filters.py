@@ -5,6 +5,10 @@ from skimage import color, filters, img_as_float, transform, util
 from sklearn.cluster import KMeans
 
 
+def grayscale(image):
+    return color.rgb2gray(image)
+
+
 def add_noise(image, amount):
     noisy_image = util.random_noise(image, mode="s&p", amount=amount)
     return noisy_image
@@ -35,10 +39,6 @@ def denoise(image, magic_factor=0.6):
     )
 
     return image_denoised
-
-
-def grayscale(image):
-    return color.rgb2gray(image)
 
 
 def _apply_warhol_effect(binary_image, color1, color2):

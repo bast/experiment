@@ -22,7 +22,7 @@ def denoise(image, magic_factor=0.6):
     patch_kw = dict(
         patch_size=5,
         patch_distance=6,
-        channel_axis=-1,  # 5x5 patches  # 13x13 search area
+        channel_axis=-1,
     )
 
     image_denoised = denoise_nl_means(

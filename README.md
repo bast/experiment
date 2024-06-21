@@ -1,0 +1,3 @@
+# imgfilters: A little example project we use in teaching
+
+We will add more documentation ...
